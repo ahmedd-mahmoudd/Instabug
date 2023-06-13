@@ -11,7 +11,7 @@ pipeline {
         
         stage('Docker Info') {
             steps {
-                // Run 'docker info' command
+                // Run 'docker info' command to make sure the Docker daemon is running and jenkins user has access to docker.sock
                 sh 'docker info'
             }
         }
@@ -43,8 +43,7 @@ pipeline {
 
     post {
         always {
-            // Cleanup: Remove the Docker image from the build machine
-            cleanWs()
+
         }
         success {
             echo 'Build successful!'
