@@ -43,7 +43,8 @@ pipeline {
 
     post {
         always {
-
+            // Cleanup: Remove the Docker image from the build machine
+            cleanWs()
         }
         success {
             echo 'Build successful!'
