@@ -33,7 +33,7 @@ pipeline {
                 // Push the Docker image to Docker Hub
                 script {
                     def imageName = "xahmedmahmoudx/instabug:${env.BUILD_NUMBER}"
-                    docker.withRegistry('https://registry.hub.docker.com', 'dockerlogin') {
+                    docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin') {
                         sh "docker push ${imageName}"
                     }
                 }
