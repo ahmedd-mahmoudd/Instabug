@@ -1,4 +1,5 @@
 pipeline {
+    triggers { pollSCM('* * * * *') }
     agent any
 
     stages {
@@ -55,7 +56,3 @@ pipeline {
     }
 }
 
-// Trigger the pipeline every 1 minute to check for new changes
-triggers {
-    pollSCM('* * * * *')
-}
