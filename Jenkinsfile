@@ -21,7 +21,7 @@ pipeline {
             steps {
                 // Build the Docker image using the Dockerfile
                 script {
-                    def imageName = "xahmedmahmoudx/instabug:${env.BUILD_NUMBER}"
+                    def imageName = "xahmedmahmoudx/instabug:latest"
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerlogin') {
                         sh "docker build -t ${imageName} ."
                     }
