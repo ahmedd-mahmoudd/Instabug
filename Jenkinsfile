@@ -9,6 +9,13 @@ pipeline {
             }
         }
         
+        stage('Docker Info') {
+            steps {
+                // Run 'docker info' command
+                sh 'docker info'
+            }
+        }
+
         stage('Build') {
             steps {
                 // Build the Docker image using the Dockerfile
