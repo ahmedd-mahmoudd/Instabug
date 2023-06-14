@@ -1,0 +1,4 @@
+apiVersion: v2
+name: instabug-go
+version: 0.1.0
+description: Instabug go app

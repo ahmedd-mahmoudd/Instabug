@@ -1,0 +1,20 @@
+app:
+  image:
+    repository: xahmedmahmoudx/instabug
+    tag: latest
+  port: 9090
+
+mysql:
+  host: localhost
+  user: root
+  password: 1234
+  port: 3306
+
+ingress:
+  enabled: false
+
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 80
