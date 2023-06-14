@@ -19,3 +19,4 @@ And exposes itself on port 9090:
 
 ![/healthcheck](image.png) 
 ![/](image-1.png) 
+![Jenkins pipeline](image-2.png)
