@@ -1,6 +1,7 @@
 pipeline {
     triggers { pollSCM('* * * * *') }
-    agent {docker}
+    //specify agent labeld docker
+    agent { label 'docker' }
 
     stages {
         stage('Checkout') {
