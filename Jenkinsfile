@@ -15,6 +15,7 @@ pipeline {
             steps {
                 // Run 'docker info' command to make sure the Docker daemon is running and jenkins user has access to docker.sock
                 sh 'docker info'
+                sh 'docker ps'
             }
         }
 
