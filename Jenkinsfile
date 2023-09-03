@@ -7,7 +7,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Clone the private GitHub repository
-                git credentialsId: 'githubloginssh', url: 'git@github.com:ahmedd-mahmoudd/Instabug.git'
+                sh "git clone https://github.com/ahmedd-mahmoudd/Instabug.git"
             }
         }
         
