@@ -1,6 +1,6 @@
 pipeline {
     triggers { pollSCM('* * * * *') }
-    agent docker
+    agent {docker}
 
     stages {
         stage('Checkout') {
